@@ -16,15 +16,26 @@ const Transformer = require('panto-transformer');
 class WriteTransformer extends Transformer {
     _transform(file) {
         const {
-            destname,
             filename,
             content
         } = file;
 
+        const {
+            destname
+        } = this.options;
+
         if (!panto.util.isNil(content)) {
             return Promise.resolve(file);
         } else {
-            return panto.file.write(destname || filename, content).then(() => {
+            let finalName = filename;
+            if (panto.util.isFunction(destname)) {
+                finalName = destname(filename);
+            } else if (panto.util.isString(destname)) {
+                finalName = destname;
+            } else if (!panto.util.isNil(destname)) {
+                panto.log.warn(`WriteTransform warnning: ${destname} must be a function or string`);
+            }
+            return panto.file.write(finalName, content).then(() => {
                 return panto.util.extend({}, file);
             });
         }
