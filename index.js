@@ -24,7 +24,7 @@ class WriteTransformer extends Transformer {
             destname
         } = this.options;
 
-        if (!panto.util.isNil(content)) {
+        if (panto.util.isNil(content)) {
             return Promise.resolve(file);
         } else {
             let finalName = filename;
