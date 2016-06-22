@@ -1,6 +1,6 @@
 {
   "name": "panto-transformer-write",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Write transformer for panto",
   "main": "index.js",
   "scripts": {
