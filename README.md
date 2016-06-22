@@ -5,9 +5,9 @@
 Write transformer for panto.
 
 ```js
-panto.loadPlugin('write');
+panto.loadTransformer('write');
 
-panto.pick('**/*.js').(panto.read()).(panto.write()).end();
+panto.pick('**/*.js').pipe(panto.read()).pipe(panto.write()).end();
 ```
 
 [npm-url]: https://npmjs.org/package/panto-transformer-write
