@@ -11,8 +11,7 @@ panto.pick('**/*.js').(panto.read()).(panto.write()).end();
 
 [npm-url]: https://npmjs.org/package/panto-transformer-write
 [downloads-image]: http://img.shields.io/npm/dm/panto-transformer-write.svg
-[npm-image]: http://img.shields.io/npm/v/panto-transformer-write.svg
-[david-dm-url]:https://david-dm.org/panto/panto-transformer-write
-[david-dm-image]:https://david-dm.org/panto/panto-transformer-write.svg
-[david-dm-dev-url]:https://david-dm.org/panto/panto-transformer-write#info=devDependencies
-[david-dm-dev-image]:https://david-dm.org/panto/panto-transformer-write/dev-status.svg
+[david-dm-url]:https://david-dm.org/pantojs/panto-transformer-write
+[david-dm-image]:https://david-dm.org/pantojs/panto-transformer-write.svg
+[david-dm-dev-url]:https://david-dm.org/pantojs/panto-transformer-write#info=devDependencies
+[david-dm-dev-image]:https://david-dm.org/pantojs/panto-transformer-write/dev-status.svg
