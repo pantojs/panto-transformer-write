@@ -7,8 +7,15 @@ Write transformer for panto.
 ```js
 panto.loadTransformer('write');
 
-panto.pick('**/*.js').pipe(panto.read()).pipe(panto.write()).end();
+panto.pick('**/*.js').pipe(panto.read()).pipe(panto.write({
+    destname: function() {
+        return this.filename;
+    }
+})).end();
 ```
+
+## options
+ - destname: function|string
 
 [npm-url]: https://npmjs.org/package/panto-transformer-write
 [downloads-image]: http://img.shields.io/npm/dm/panto-transformer-write.svg

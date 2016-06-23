@@ -29,7 +29,7 @@ class WriteTransformer extends Transformer {
         } else {
             let finalName = filename;
             if (panto.util.isFunction(destname)) {
-                finalName = destname(filename);
+                finalName = destname.call(file);
             } else if (panto.util.isString(destname)) {
                 finalName = destname;
             } else if (!panto.util.isNil(destname)) {
