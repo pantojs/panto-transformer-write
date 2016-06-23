@@ -8,8 +8,8 @@ Write transformer for panto.
 panto.loadTransformer('write');
 
 panto.pick('**/*.js').pipe(panto.read()).pipe(panto.write({
-    destname: function() {
-        return this.filename;
+    destname: (file) => {
+        return file.filename;
     }
 })).end();
 ```
