@@ -6,9 +6,9 @@ Write transformer for panto.
 ```js
 panto.loadTransformer('write');
 
-panto.pick('**/*.js').pipe(panto.read()).pipe(panto.write({
+panto.pick('**/*.js').read().write({
     destname: file => file.filename
-})).end();
+});
 ```
 
 ## options

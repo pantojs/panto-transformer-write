@@ -24,21 +24,22 @@ class WriteTransformer extends Transformer {
             destname
         } = this.options;
 
-        if (panto.util.isNil(content)) {
+        if (panto._.isNil(content)) {
             return Promise.resolve(file);
         } else {
             let finalName = filename;
-            if (panto.util.isFunction(destname)) {
+            if (panto._.isFunction(destname)) {
                 finalName = destname.call(file, file);
-            } else if (panto.util.isString(destname)) {
+            } else if (panto._.isString(destname)) {
                 finalName = destname;
-            } else if (!panto.util.isNil(destname)) {
+            } else if (!panto._.isNil(destname)) {
                 panto.log.warn(`WriteTransform warnning: ${destname} must be a function or string`);
             }
-            return panto.file.write(finalName, content).then(() => {
-                return panto.util.extend({}, file);
-            });
+            return panto.file.write(finalName, content).then(() => file);
         }
+    }
+    isCacheable() {
+        return false;
     }
 }
 

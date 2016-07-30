@@ -66,7 +66,7 @@ describe('panto-transformer-write', () => {
                 done();
             });
         });
-        it('should not write if content is null/undefined', () => {
+        it('should not write if content is null/undefined', done => {
             const file = {
                 filename: 'm.js'
             };
@@ -85,5 +85,6 @@ describe('panto-transformer-write', () => {
                 done();
             });
         });
+
     });
 });
