@@ -1,5 +1,5 @@
 # panto-transformer-write
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url] [![Coverage Status][coveralls-image]][coveralls-url]
 
 Write transformer for panto.
 
@@ -23,3 +23,5 @@ panto.pick('**/*.js').read().write({
 [david-dm-image]:https://david-dm.org/pantojs/panto-transformer-write.svg
 [david-dm-dev-url]:https://david-dm.org/pantojs/panto-transformer-write#info=devDependencies
 [david-dm-dev-image]:https://david-dm.org/pantojs/panto-transformer-write/dev-status.svg
+[coveralls-image]:https://coveralls.io/repos/github/pantojs/panto-transformer-write/badge.svg?branch=master
+[coveralls-url]:https://coveralls.io/github/pantojs/panto-transformer-write?branch=master
