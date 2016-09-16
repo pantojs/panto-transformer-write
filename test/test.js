@@ -85,6 +85,23 @@ describe('panto-transformer-write', () => {
                 done();
             });
         });
+        it('should return final name', done => {
+            const file = {
+                filename: 'm.js'
+            };
 
+            panto.setOptions({
+                cwd: __dirname,
+                output: 'output'
+            });
+
+            new WriteTransformer({
+                destname: 'n.js'
+            }).transform(file).then(tfile => {
+                assert.deepEqual(tfile.filename, 'n.js');
+            }).then(() => {
+                done();
+            });
+        });
     });
 });

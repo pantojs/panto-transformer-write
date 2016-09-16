@@ -3,10 +3,12 @@
 
 Write transformer for panto.
 
+> This should be in the final stream, chainning it is not suggested!
+
 ```js
 panto.loadTransformer('write');
 
-panto.pick('**/*.js').read().write({
+panto.$('**/*.js').read().write({
     destname: file => file.filename
 });
 ```
@@ -21,7 +23,7 @@ panto.pick('**/*.js').read().write({
 [travis-image]: http://img.shields.io/travis/pantojs/panto-transformer-write.svg
 [david-dm-url]:https://david-dm.org/pantojs/panto-transformer-write
 [david-dm-image]:https://david-dm.org/pantojs/panto-transformer-write.svg
-[david-dm-dev-url]:https://david-dm.org/pantojs/panto-transformer-write#info=devDependencies
+[david-dm-dev-url]:https://david-dm.org/pantojs/panto-transformer-write#type=dev
 [david-dm-dev-image]:https://david-dm.org/pantojs/panto-transformer-write/dev-status.svg
 [coveralls-image]:https://coveralls.io/repos/github/pantojs/panto-transformer-write/badge.svg?branch=master
 [coveralls-url]:https://coveralls.io/github/pantojs/panto-transformer-write?branch=master
